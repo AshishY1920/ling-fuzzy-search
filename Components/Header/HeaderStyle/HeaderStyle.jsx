@@ -64,14 +64,13 @@ const HeaderStyle = StyleSheet.create({
   bgContainer: {
     height: '100%',
     width: undefined,
-    aspectRatio: 1,
+    // aspectRatio: 1,
     zIndex: 1,
   },
   searchButton: {
-    flex: 0.8,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
-    width: RFValue(48),
-    height: RFValue(48),
+    width: RFValue(40),
+    height: RFValue(40),
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',

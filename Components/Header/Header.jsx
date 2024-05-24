@@ -4,6 +4,10 @@ import HeaderStyle from './HeaderStyle/HeaderStyle';
 import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 import {Searchbar} from 'react-native-paper';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import {
+  heightPercentageToDP,
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 
 const Header = React.memo(
   ({handleSearch, handleBack, searchNull, setIsNull}) => {
@@ -63,8 +67,7 @@ const Header = React.memo(
             style={{
               borderColor: 'rgba(255, 255, 255, 0.5)',
               backgroundColor: 'rgba(255, 255, 255, 0.20)',
-              height: RFValue(45),
-              width: '100%',
+              width: wp('80%'),
               borderWidth: 1,
               fontSize: RFPercentage(2),
               flex: 4,
@@ -74,12 +77,21 @@ const Header = React.memo(
           />
 
           {/* Button */}
-          <TouchableOpacity
-            activeOpacity={0.8}
-            onPress={handleSubmit}
-            style={HeaderStyle.searchButton}>
-            <AntDesign color="white" name="search1" size={RFValue(22)} />
-          </TouchableOpacity>
+          <View
+            style={{
+              flex: 0.5,
+              justifyContent: 'center',
+              alignSelf: 'center',
+              display: 'flex',
+              alignItems: 'center',
+            }}>
+            <TouchableOpacity
+              activeOpacity={0.8}
+              onPress={handleSubmit}
+              style={HeaderStyle.searchButton}>
+              <AntDesign color="white" name="search1" size={RFValue(22)} />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     );
