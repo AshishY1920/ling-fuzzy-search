@@ -7,7 +7,7 @@ import Home from './Screens/Home';
 
 const App = () => {
   useEffect(() => {
-    StatusBar.setBackgroundColor('#ff0474');
+    StatusBar.setBackgroundColor('#a224be');
     StatusBar.setBarStyle('light-content');
     return () => {
       StatusBar.setBackgroundColor('#ffffff');

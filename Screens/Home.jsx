@@ -152,12 +152,12 @@ const Home = () => {
     <View>
       <Image
         style={HeaderStyle.bgContainer}
-        source={require('../assets/Icons/bkg.jpg')}
+        source={require('../assets/Icons/4.jpg')}
       />
-      <Image
+      {/* <Image
         style={HeaderStyle.abstractImage}
         source={require('../assets/Icons/1.png')}
-      />
+      /> */}
       {/* Header Component */}
       <View style={[HeaderStyle.Container, {flex: 1}]}>
         <Header
